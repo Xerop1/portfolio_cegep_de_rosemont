@@ -1,0 +1,2 @@
+- name: Inject Secret into Config
+  run: | sed -i 's|google_map_url|${{ secrets.GOOGLE_MAP_URL }}|g' javascript/config.js
