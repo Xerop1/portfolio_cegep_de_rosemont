@@ -15,7 +15,9 @@
     <title>Portfolio Site Web</title>
 
     <!-- additional js files -->
+    <script src="./javascript/config.js" defer></script>
     <script src="./javascript/services_card_tilt.js" defer></script>
+    <script src="./javascript/google_map.js" defer></script>
 </head>
 
 
@@ -417,9 +419,8 @@ cliquez sur le bouton Generate HTML Code qui fournira votre code HTML Google Map
                     <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
 
                     <div style="overflow:hidden;max-width:100%;width:500px;height:500px;">
-                        <div id="mymap-display" style="height:100%; width:100%;max-width:100%;"><iframe
-                                style="height:100%;width:100%;border:0;" frameborder="0"
-                                src="https://www.google.com/maps/embed/v1/place?q=6400+16e+Avenue,+Montréal,+QC+H1X+2S9&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                        <div id="mymap-display" style="height:100%; width:100%;max-width:100%;"><iframe id="mymap-iframe"
+                                style="height:100%;width:100%;border:0;" frameborder="0"></iframe>
                         </div><a class="embed-maphtml" rel="nofollow" href="https://dedicatedserver.expert"
                             id="grabmap-authorization">Dedicated Server Expert</a>
                         <style>
