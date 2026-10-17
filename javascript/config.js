@@ -1,5 +1,5 @@
 window.process = {
   env: {
-    GOOGLE_MAP_URL: "google_map_url"
+    GOOGLE_MAP_URL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.6552763229715!2d-73.58483302388983!3d45.55725977107558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91eacc6d49213%3A0x477c476a49d319de!2s6400%2016e%20Avenue%2C%20Montr%C3%A9al%2C%20QC%20H1X%202S9!5e0!3m2!1sfr!2sca!4v1792200068356!5m2!1sfr!2sca"
   }
 }
