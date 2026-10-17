@@ -27,8 +27,6 @@ if (shouldRun) {
         else {
             addCardMouseEvents(card, rotationDeg, shadowSize, shadowBlur, root.getPropertyValue("--card-shadow-clr-2"));
         }
-
-        console.log(cardCounter);
     })
 }
 
