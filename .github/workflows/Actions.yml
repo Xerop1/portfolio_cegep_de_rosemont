@@ -20,13 +20,6 @@ jobs:
       - name: Checkout repository code
         uses: actions/checkout@v4
 
-      - name: Inject Secret into Config
-        run: |
-          sed -i 's|google_map_url|${{ secrets.GOOGLE_MAP_URL }}|g' javascript/config.js
-
-      - name: Prove the text swapped
-        run: cat javascript/config.js
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
