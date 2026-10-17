@@ -1,3 +1,37 @@
-- name: Inject Secret into Config
-  run: |
-    sed -i 's|google_map_url|${{ secrets.GOOGLE_MAP_URL }}|g' javascript/config.js
+name: Inject Secrets and Deploy Github Web Page
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  inject-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Inject Secret into Config
+        run: |
+          sed -i 's|google_map_url|${{ secrets.GOOGLE_MAP_URL }}|g' javascript/config.js
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
