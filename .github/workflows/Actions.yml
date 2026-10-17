@@ -26,6 +26,7 @@ jobs:
           find: "google_map_url"
           replace: ${{ secrets.GOOGLE_MAP_URL }}
           include: "javascript/config.js"
+          regex: false
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
