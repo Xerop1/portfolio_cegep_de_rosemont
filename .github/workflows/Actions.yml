@@ -21,8 +21,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Inject Secret into Config
-        run: |
-          sed -i 's|google_map_url|${{ secrets.GOOGLE_MAP_URL }}|g' javascript/config.js
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "google_map_url"
+          replace: ${{ secrets.GOOGLE_MAP_URL }}
+          include: "javascript/config.js"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
